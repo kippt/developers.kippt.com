@@ -7,8 +7,8 @@ Developer site for [Kippt](https://kippt.com)'s API.
 To setup local environment (requires git, virtualenv and pip)
 
     git clone https://github.com/kippt/developers.kippt.com.git
-    virtualenv ENV
-    . ENV/bin/activate
+    virtualenv venv
+    . venv/bin/activate
     pip install -r requirements.txt
 
 To run local version:
