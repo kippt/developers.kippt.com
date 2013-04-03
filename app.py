@@ -26,12 +26,20 @@ def page_not_found(e):
 def index():
     return render_template('index.html')
 
+@app.route('/policy/')
+def policy():
+    return render_template('policy.html')
+
+@app.route('/apps/')
+def apps():
+    return render_template('apps.html')
+
 @app.route('/apps/<app_slug>')
 def app_view(app_slug):
     '''
     App View
     '''
-
+    
     # Check that directory exists
     if not os.path.exists('templates/apps/%s/' % app_slug):
         abort(404)
