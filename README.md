@@ -20,6 +20,8 @@ To run local version:
 If you have made an app or some other hack on top of Kippt's API, you can submit
 that to app gallery. To do so, submit a pull request with your app's information:
 
-1. Create a folder under ```gallery/apps``` and copy templates from ```gallery/apps/template```
-2. Modify files with your app's information
-3. Profit.
+    fab add
+
+This will create the manifest and description files. After this you'll need to run
+```fab compile:<app_slug>``` command given the HTML for the app.
+
