@@ -1,11 +1,14 @@
 import re
 import os
 import json
+import markdown
 from datetime import date
 
 from fabric.operations import prompt
 from fabric.api import run
-from fabric.colors import green as _green, yellow as _yellow
+from fabric.colors import green as _green, yellow as _yellow, red as _red
+
+from jinja2 import Environment, FileSystemLoader
 
 def add():
     '''
@@ -50,11 +53,44 @@ def add():
     
     print _green('--- Saved to /apps/%s/' % slug)
     print _green('--- Remember to edit description.md and convert to html with')
-    print _yellow('---     fab compile %s' % slug) 
+    print _yellow('---     fab compile:%s' % slug) 
 
-def compile():
+def compile(slug):
     '''
     Compile app template into HTML
     '''
-    pass
+    if not os.path.exists('apps/%s' % slug):
+        print _red('--- App with this slug can\'t be found(%s)' % slug)
+        return
+    
+    env = Environment(loader=FileSystemLoader('templates'))
+    template = env.get_template('apps/template.html')
+    
+    # Manifest
+    data = ''
+    with open ("apps/%s/manifest.json" % slug, "r") as manifest:
+        data = manifest.read().replace('\n', '')
+    manifest = json.loads(data)
+    
+    # Description
+    description = ''
+    with open ("apps/%s/description.md" % slug, "r") as desc_file:
+        description = desc_file.read().replace('\n', '')
+    
+    context = manifest
+    context['description']= markdown.markdown(description)
+    
+    # Write output
+    if not os.path.exists('templates/apps/%s' % slug):
+        os.makedirs('templates/apps/%s' % slug)
+    else:
+        # remove old files
+        open("templates/apps/%s/index.html" % slug, "w").close()
+    output = open("templates/apps/%s/index.html" % slug, "w")
+    output.write('{% extends "base.html" %}\n{% block body %}\n')
+    output.write(template.render(context))
+    output.write('\n{% endblock %}')
+    output.close()
+
+
     

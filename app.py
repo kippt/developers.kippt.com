@@ -5,10 +5,33 @@ from flask import render_template
 
 app = Flask(__name__)
 
+## Error views
+
+@app.errorhandler(404)
+def page_not_found(e):
+    return render_template('404.html'), 404
+
+@app.errorhandler(500)
+def page_not_found(e):
+    return render_template('500.html'), 500
+
+## App views
+
 @app.route('/')
 def index():
-    
     return render_template('index.html')
+
+@app.route('/apps/<app_slug>')
+def app_view(app_slug):
+    '''
+    App View
+    '''
+
+    # Check that directory exists
+    if not os.path.exists('templates/apps/%s/' % app_slug):
+        abort(404)
+    
+    return render_template('apps/%s/index.html' % app_slug)
 
 if __name__ == '__main__':
     # Bind to PORT if defined, otherwise default to 5000.
