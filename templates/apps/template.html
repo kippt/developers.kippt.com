@@ -1,45 +1,58 @@
-<h1>{{ name }}</h1>
+<div class="row app">
+    
+    <div class="span4">
+        <h1>{{ name }}</h1>
+        <p>by {{ developer }}</p>
+    </div>
+    
+    <div class="span3">
+        <img src="http://kippster.net/images/icon.png">
+    </div>
 
-<table>
-    {% if developer %}
-    <tr>
-        <th>Developer</th>
-        <td>{{ developer }}</td>
-    </tr>
-    {% endif %}
-    {% if platform %}
-    <tr>
-        <th>Platform</th>
-        <td>{{ platform }}</td>
-    </tr>
-    {% endif %}
-    {% if price %}
-    <tr>
-        <th>Price</th>
-        <td>{{ price }}</td>
-    </tr>
-    {% endif %}
-    {% if added %}
-    <tr>
-        <th>Added</th>
-        <td>{{ added }}</td>
-    </tr>
-    {% endif %}
-    {% if website %}
-    <tr>
-        <th>Website</th>
-        <td><a href="{{ website }}" target="_blank">{{ website }}</a></td>
-    </tr>
-    {% endif %}
-    {% if twitter %}
-    <tr>
-        <th>Twitter</th>
-        <td><a href="http://twitter/{{ twitter }}" target="_blank">{{ twitter }}</a></td>
-    </tr>
-    {% endif %}
-    <tr colspan=2>
-        <td><a href="{{ link }}" class="btn">Open</a></td>
-    </tr>
-</table>
+    <div class="span5">
+        {{ description|safe }}
+    </div> 
 
-{{ description }}
+    <table class="span3">
+        {% if developer %}
+        <tr>
+            <th>Developer</th>
+            <td>{{ developer }}</td>
+        </tr>
+        {% endif %}
+        {% if platform %}
+        <tr>
+            <th>Platform</th>
+            <td>{{ platform }}</td>
+        </tr>
+        {% endif %}
+        {% if price %}
+        <tr>
+            <th>Price</th>
+            <td>{{ price }}</td>
+        </tr>
+        {% endif %}
+        {% if added %}
+        <tr>
+            <th>Added</th>
+            <td>{{ added }}</td>
+        </tr>
+        {% endif %}
+        {% if website %}
+        <tr>
+            <th>Website</th>
+            <td><a href="{{ website }}" target="_blank">{{ website }}</a></td>
+        </tr>
+        {% endif %}
+        {% if twitter %}
+        <tr>
+            <th>Twitter</th>
+            <td><a href="http://twitter/{{ twitter }}" target="_blank">{{ twitter }}</a></td>
+        </tr>
+        {% endif %}
+        <tr>
+            <td colspan="2"><a href="{{ link }}" class="btn">Get the App</a></td>
+        </tr>
+    </table>
+</div>
+

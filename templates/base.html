@@ -6,13 +6,14 @@
     <link rel=stylesheet type=text/css href="{{ url_for('static', filename='styles.css') }}">
     <script type="text/javascript" src="//use.typekit.net/rop5xco.js"></script>
     <script type="text/javascript">try{Typekit.load();}catch(e){}</script> 
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 </head>
 
-<body class="{% block bodyclass %}{% endblock%}" o>
+<body class="{% block bodyclass %}{% endblock%}">
     <div class="nav">
         <div class="container">
             <a href="/" class="logo"><img src="{{ url_for('static', filename='kippt-logo.png') }}" width="192"></a>
-            <a href="/" class="back">‹ Back to Kippt</a>
+            <a href="/" class="back">‹ Kippt</a>
         </div>  
         <div class="header">
             <h1>Developer</h1>
@@ -47,7 +48,34 @@
     </div>
     
     <div class="footer">
+        <p>
+            <a href="https://kippt.com">Kippt</a>
+            <a href="https://twitter.com/kippt">@kippt</a>
+            <a href="https://blog.kippt.com">Blog</a>
+            <a href="mailto:hello@kippt.com">Contact</a>
+        </p>
         <p>Kippt for Developers</p>
     </div>
+    
+<script type="text/javascript">
+
+    
+    $(document).ready(function(){
+    	$(window).bind('scroll',function(e){
+       		parallaxScroll();
+       	});
+
+       	function parallaxScroll(){
+       		var scrolledY = $(window).scrollTop();
+    		$('.header').css({
+    		    'height' : 260-(scrolledY*0.66)+"px",
+    		    'opacity' : 1.1-(scrolledY/266)   		    
+    		});
+
+  
+       	}
+
+    });
+</script>
 </body>
 </html>
