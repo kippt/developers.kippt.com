@@ -51,3 +51,10 @@ def add():
     print _green('--- Saved to /apps/%s/' % slug)
     print _green('--- Remember to edit description.md and convert to html with')
     print _yellow('---     fab compile %s' % slug) 
+
+def compile():
+    '''
+    Compile app template into HTML
+    '''
+    pass
+    
