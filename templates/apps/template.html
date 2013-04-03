@@ -1,0 +1,45 @@
+<h1>{{ name }}</h1>
+
+<table>
+    {% if developer %}
+    <tr>
+        <th>Developer</th>
+        <td>{{ developer }}</td>
+    </tr>
+    {% endif %}
+    {% if platform %}
+    <tr>
+        <th>Platform</th>
+        <td>{{ platform }}</td>
+    </tr>
+    {% endif %}
+    {% if price %}
+    <tr>
+        <th>Price</th>
+        <td>{{ price }}</td>
+    </tr>
+    {% endif %}
+    {% if added %}
+    <tr>
+        <th>Added</th>
+        <td>{{ added }}</td>
+    </tr>
+    {% endif %}
+    {% if website %}
+    <tr>
+        <th>Website</th>
+        <td><a href="{{ website }}" target="_blank">{{ website }}</a></td>
+    </tr>
+    {% endif %}
+    {% if twitter %}
+    <tr>
+        <th>Twitter</th>
+        <td><a href="http://twitter/{{ twitter }}" target="_blank">{{ twitter }}</a></td>
+    </tr>
+    {% endif %}
+    <tr colspan=2>
+        <td><a href="{{ link }}" class="btn">Open</a></td>
+    </tr>
+</table>
+
+{{ description }}
