@@ -20,6 +20,10 @@ hr {
     margin:60px 0;
 }
 
+a {
+    color:#111;
+}
+
 a:hover {
     color:#e94000 !important;
     text-decoration:none;
@@ -43,6 +47,7 @@ a:hover {
     float:right;
     text-transform:uppercase;
     letter-spacing:1px;
+    margin-top:3px;
 }
 
 .nav .header {
@@ -121,4 +126,47 @@ body.home .nav .header {
 
 .footer p {
     margin:0;
+}
+
+/* RESPONSIVE */ 
+
+
+@media (max-width: 460px) {
+    .nav .header {
+        padding:60px 0;
+        background-size:auto 130%;
+    }
+    
+    .side, .content {
+        padding:30px 0;
+    }
+    
+    hr {
+        margin:20px 0;
+    }
+    
+    .nav .header h1 {
+        font-size:36px;
+    }
+    
+    .nav .header p {
+        letter-spacing:0.1em;
+    }
+
+}
+
+@media (max-width: 767px) {
+    body {
+        padding:0;
+    }
+    
+    .container, .nav {
+        padding-left:20px;
+        padding-right:20px;
+    }
+    
+    .side li {
+        text-align:left;
+    }
+
 }
