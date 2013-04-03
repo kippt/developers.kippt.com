@@ -21,18 +21,21 @@ def add():
     print _green("--- Generating new app for Kippt App Gallery")
     
     name = prompt("App name:", default='', validate=r'^[\w\s-]+$')
-    developer = prompt("Developer (your name/organization):", default='')
-    platform = prompt("Platform (e.g. iOS):", default='')
-    price = prompt("Price (e.g. $4):", default='')
+    developer = prompt("Developer (your name/organization):", validate=r'^[\w\s-]+$')
+    developer_website = prompt("(Optional) Developer website (or Twitter address):", default='')
+    print 'Platform:\n[1] Web\n[2] iPhone\n[3] Android\n[4] Windows Phone\n[4] Desktop\n[5] Library\n[6] Other\n'
+    platform = prompt("Platform:", default='1', validate=r'^[1-6]+$')
+    price = prompt("(Optional) Price (e.g. $4):", default='')
+    link = prompt("(Optional) Link (e.g. App Store or website):", default='')
     added = date.today().strftime('%B%e. %Y')
-    link = prompt("Link (e.g. App Store or website):", default='')
     
-    website = prompt("Website:", default='')
-    twitter = prompt("Twitter (e.g. @getappname):", default='')
+    website = prompt("(Optional) Website:", default='')
+    twitter = prompt("(Optional) Twitter (e.g. @getappname):", default='')
     
     data = {
         'name': name,
         'developer': developer,
+        'developer_website': developer_website,
         'platform': platform,
         'price': price,
         'added': added,
@@ -46,6 +49,7 @@ def add():
     slug = re.sub('[-\s]+', '-', slug)
     if not os.path.exists('apps/%s' % slug):
         os.makedirs('apps/%s' % slug)
+        os.makedirs('apps/%s/images' % slug)
     
     manifest = open("apps/%s/manifest.json" % slug, "w")
     manifest.write(json.dumps(data, indent=4))
@@ -55,8 +59,16 @@ def add():
     manifest.write('This is %s.\n\nIt\'s time to add a markdown formatted description for the app.' % name)
     manifest.close()
     
+    print _green('--- Add app description to /apps/%s/description.md' % slug)
+    prompt("Press enter to continue", default='')
+    
+    print _green('--- (Optional) Add logo (logo.png/logo.jpg, 256x256px) to /apps/%s/images/' % slug)
+    prompt("Press enter to continue", default='')
+    
+    print _green('--- (Optional) Add screenshots (JPG/PNG, max. 1024x1024 & 1MB) to /apps/%s/images/' % slug)
+    prompt("Press enter to continue", default='')
+    
     print _green('--- Saved to /apps/%s/' % slug)
-    print _green('--- Remember to edit description.md and convert to html with')
     print _yellow('---     fab compile:%s' % slug) 
 
 def compile(slug):
@@ -74,14 +86,13 @@ def compile(slug):
     data = ''
     with open ("apps/%s/manifest.json" % slug, "r") as manifest:
         data = manifest.read().replace('\n', '')
-    manifest = json.loads(data)
+    context = json.loads(data)
     
     # Description
     description = ''
     with open ("apps/%s/description.md" % slug, "r") as desc_file:
-        description = desc_file.read().replace('\n', '')
+        description = desc_file.read()
     
-    context = manifest
     context['description']= markdown.markdown(description)
     
     # Write output
