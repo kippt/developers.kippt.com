@@ -2,13 +2,52 @@
 <html>
 <head>
     <title>{% block title %}Welcome{% endblock %} - Kippt Developers</title>
-    
+    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='bootstrap.min.css') }}">   
     <link rel=stylesheet type=text/css href="{{ url_for('static', filename='styles.css') }}">
+    <script type="text/javascript" src="//use.typekit.net/rop5xco.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script> 
 </head>
 
-<body>
-    {% block body %}
-        <h1>developers.kippt.com</h1>
-    {% endblock %}
-<body>
+<body class="{% block bodyclass %}{% endblock%}" o>
+    <div class="nav">
+        <div class="container">
+            <a href="/" class="logo"><img src="{{ url_for('static', filename='kippt-logo.png') }}" width="192"></a>
+            <a href="/" class="back">‹ Back to Kippt</a>
+        </div>  
+        <div class="header">
+            <h1>Developer</h1>
+            <p>Documentation and Resources</p>
+        </div>
+    </div>
+    
+    <div class="container main">   
+    
+        <div class="row">
+        
+            <div class="span3 side">
+                <ul>
+                    <li><a href="/">Getting Started</a></li>
+                    <li><a href="">Documentation</a></li>
+                    <li><a href="">Resources</a></li>
+                    <li><a href="">Terms</a></li>
+                    <li><a href="">Mailing List</a></li>
+                    <li></li>
+                    <li><a href="">App Gallery</a></li>
+                </ul>
+            </div>
+        
+            <div class="span8 offset1 content">
+                {% block body %}
+                
+                {% endblock %}
+            </div>
+            
+        </div>
+
+    </div>
+    
+    <div class="footer">
+        <p>Kippt for Developers</p>
+    </div>
+</body>
 </html>
