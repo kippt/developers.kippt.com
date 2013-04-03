@@ -88,6 +88,10 @@ body.home .nav .header {
     box-shadow:-1px 0 0 #eee inset;
 }
 
+.side ul {
+    margin:0 2em 0 0;
+}
+
 .side li {
     list-style:none;
     text-align:right;
@@ -97,7 +101,6 @@ body.home .nav .header {
 .side li a {
     font-size:18px;
     color:#111;
-    padding-right:2em;
 }
 
 .side li a:after {
