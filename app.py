@@ -19,8 +19,19 @@ def page_not_found(e):
 
 @app.route('/')
 def index():
-    
     return render_template('index.html')
+
+@app.route('/apps/<app_slug>')
+def app_view(app_slug):
+    '''
+    App View
+    '''
+
+    # Check that directory exists
+    if not os.path.exists('templates/apps/%s/' % app_slug):
+        abort(404)
+    
+    return render_template('apps/%s/index.html' % app_slug)
 
 if __name__ == '__main__':
     # Bind to PORT if defined, otherwise default to 5000.
