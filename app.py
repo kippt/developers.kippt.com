@@ -3,7 +3,12 @@ import os
 from flask import Flask
 from flask import render_template
 
+from flaskext.markdown import Markdown
+
 app = Flask(__name__)
+
+# Flask extensions
+Markdown(app)
 
 ## Error views
 
