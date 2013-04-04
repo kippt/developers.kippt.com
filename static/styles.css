@@ -37,6 +37,11 @@ p, li {
     margin-bottom:1.5em;
 }
 
+.lead {
+    font-size:1.3;
+    color:#999;
+}
+
 hr {
     margin:60px 0;
 }
@@ -153,8 +158,8 @@ ul.apps {
 }
 
 ul.apps li {
-    height:240px;
-
+    height:200px;
+    margin-top:20px;
 }
 
 .apps li .icon {
@@ -180,6 +185,10 @@ ul.apps li {
     line-height:1.2;
 }
 
+.apps-gallery h1 {
+    margin-bottom:0.2em;
+}
+
 /* SIDE */
 
 .side {
@@ -187,7 +196,7 @@ ul.apps li {
 }
 
 .side ul {
-    margin:0 2em 0 0;
+    margin:0 0 0 0;
 }
 
 .side li {
@@ -199,11 +208,25 @@ ul.apps li {
 .side li a {
     font-size:18px;
     color:#111;
+    padding:0.5em 1em;
+}
+
+.side li h5 {
+    margin-right:2em;
+}
+
+.side li a:hover {
+    background:#eee;
 }
 
 .side li a:after {
     content:" ›";
     color:#aaa;
+}
+
+body.apps-gallery .n-apps a,
+body.home .n-home a {
+    background:#eee;    
 }
 
 
