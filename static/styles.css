@@ -60,7 +60,7 @@ a:hover {
 
 .nav {
     color:#fff;
-    background:#10151a;
+    background:rgb(30, 41, 56);
     padding:30px 0 0;
     min-height:52px;
 }
@@ -90,9 +90,9 @@ a:hover {
     padding:80px 0 0;
     text-align:center;
     text-transform:uppercase;
-    background:#32ae95;
     display:none;
     height:280px;
+  
 }
 
 .nav .header h1 {
@@ -119,9 +119,7 @@ body.home .nav .header {
     display:block;
 }
 
-.nav {
-    background:#32ae95;
-}
+
 
 /* CONTENT */
 
