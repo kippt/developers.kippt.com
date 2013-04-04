@@ -10,6 +10,11 @@ app = Flask(__name__)
 # Flask extensions
 Markdown(app)
 
+# Enviromental variables
+app.config.TYPEKIT_KEY = os.environ.get('TYPEKIT_KEY', None)
+app.config.GOOGLE_ANALYTICS_TOKEN = os.environ.get('GOOGLE_ANALYTICS_TOKEN', None)
+app.config.GOOGLE_ANALYTICS_DOMAIN = os.environ.get('GOOGLE_ANALYTICS_TOKEN', None)
+
 ## Error views
 
 @app.errorhandler(404)
@@ -49,6 +54,6 @@ def app_view(app_slug):
 if __name__ == '__main__':
     # Bind to PORT if defined, otherwise default to 5000.
     port = int(os.environ.get('PORT', 5000))
-    if os.environ.get('PORT'):
+    if not os.environ.get('PORT'):
         app.debug = True
     app.run(host='0.0.0.0', port=port)

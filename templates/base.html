@@ -4,7 +4,7 @@
     <title>{% block title %}Welcome{% endblock %} - Kippt Developers</title>
     <link rel=stylesheet type=text/css href="{{ url_for('static', filename='bootstrap.min.css') }}">   
     <link rel=stylesheet type=text/css href="{{ url_for('static', filename='styles.css') }}">
-    <script type="text/javascript" src="//use.typekit.net/rop5xco.js"></script>
+    {% if config.TYPEKIT_KEY %}<script type="text/javascript" src="//use.typekit.net/{{ config.TYPEKIT_KEY }}.js"></script>{% endif %}
     <script type="text/javascript">try{Typekit.load();}catch(e){}</script> 
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
 </head>
@@ -59,21 +59,29 @@
     </div>
     
 <script type="text/javascript">
-
     $(document).ready(function(){
-    	$(window).bind('scroll',function(e){
-       		parallaxScroll();
-       	});
-
-       	function parallaxScroll(){
-       		var scrolledY = $(window).scrollTop();
-    		$('.home .header').css({
-    		    'height' : 260-(scrolledY*0.66)+"px",
-    		    'opacity' : 1.1-(scrolledY/266)   		    
-    		});
-       	}
-
+        $(window).bind('scroll',function(e){
+            parallaxScroll();
+        });
+        function parallaxScroll(){
+            var scrolledY = $(window).scrollTop();
+            $('.header').css({
+                'height' : 260-(scrolledY*0.66)+"px",
+                'opacity' : 1.1-(scrolledY/266)
+            });
+        }
     });
 </script>
+{% if config.GOOGLE_ANALYTICS_TOKEN %}
+<script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', '{{ config.GOOGLE_ANALYTICS_TOKEN }}', '{{ config.GOOGLE_ANALYTICS_DOMAIN }}');
+      ga('send', 'pageview');
+</script>
+{% endif %}
 </body>
 </html>
