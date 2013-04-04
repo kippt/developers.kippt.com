@@ -6,6 +6,8 @@ import re
 import os
 import json
 import markdown
+import shutil
+from PIL import Image
 from datetime import date
 
 from fabric.operations import prompt
@@ -32,7 +34,11 @@ def add():
     website = prompt("(Optional) Website:", default='')
     twitter = prompt("(Optional) Twitter (e.g. @getappname):", default='')
     
+    slug = re.sub('[^\w\s-]', '', name).strip().lower()
+    slug = re.sub('[-\s]+', '-', slug)
+    
     data = {
+        'slug': slug,
         'name': name,
         'developer': developer,
         'developer_website': developer_website,
@@ -45,11 +51,10 @@ def add():
     }
     
     # Create directory
-    slug = re.sub('[^\w\s-]', '', name).strip().lower()
-    slug = re.sub('[-\s]+', '-', slug)
     if not os.path.exists('apps/%s' % slug):
         os.makedirs('apps/%s' % slug)
         os.makedirs('apps/%s/images' % slug)
+        os.makedirs('apps/%s/images/screenshots' % slug)
     
     manifest = open("apps/%s/manifest.json" % slug, "w")
     manifest.write(json.dumps(data, indent=4))
@@ -65,7 +70,7 @@ def add():
     print _green('--- (Optional) Add logo (logo.png/logo.jpg, 256x256px) to /apps/%s/images/' % slug)
     prompt("Press enter to continue", default='')
     
-    print _green('--- (Optional) Add screenshots (JPG/PNG, max. 1024x1024 & 1MB) to /apps/%s/images/' % slug)
+    print _green('--- (Optional) Add  max 3 screenshots (JPG/PNG, max. 1024x1024 & 1MB) to /apps/%s/images/screenshots/' % slug)
     prompt("Press enter to continue", default='')
     
     print _green('--- Saved to /apps/%s/' % slug)
@@ -87,11 +92,36 @@ def compile(slug):
     with open ("apps/%s/manifest.json" % slug, "r") as manifest:
         data = manifest.read().replace('\n', '')
     context = json.loads(data)
+    context['images'] = {'logo': None, 'screenshots': []}
     
     # Description
     description = ''
     with open ("apps/%s/description.md" % slug, "r") as desc_file:
         description = desc_file.read()
+    
+    # Images
+    if not os.path.exists('static/apps/%s' % slug):
+        os.makedirs('static/apps/%s' % slug)
+    # Lets find the logo
+    if os.path.exists('apps/%s/images/logo.jpg' % slug):
+        logo_file = Image.open('apps/%s/images/logo.jpg' % slug)
+        logo_filename = 'logo.jpg'
+    if os.path.exists('apps/%s/images/logo.png' % slug):
+        logo_file = Image.open('apps/%s/images/logo.png' % slug)
+        logo_filename = 'logo.png'
+    if logo_file:
+        width, height = logo_file.size
+        if width > 256 or height > 256:
+            print _red('---    You made the logo too big - Make sure it\'s 256x256px' % slug)
+        else:
+            shutil.copy2('apps/%s/images/%s' % (slug, logo_filename), 'static/apps/%s' %  (slug))
+            context['images']['logo'] = logo_filename
+    
+    # Other files
+    for screenshot in os.listdir('apps/%s/images/screenshots' % slug):
+        if re.match(r'^[\w_-]+.(jpg|jpeg|png)$', screenshot):
+            shutil.copy2('apps/%s/images/screenshots/%s' % (slug, screenshot), 'static/apps/%s' % (slug))
+            context['images']['screenshots'].append(screenshot)
     
     context['description']= markdown.markdown(description)
     
@@ -101,6 +131,7 @@ def compile(slug):
     else:
         # remove old files
         open("templates/apps/%s/index.html" % slug, "w").close()
+    
     output = open("templates/apps/%s/index.html" % slug, "w")
     output.write('{% extends "base.html" %}\n{% block body %}\n')
     output.write(template.render(context))
