@@ -1,7 +1,9 @@
 <div class="row app">
  
     <div class="span1 icon">
-        <img src="http://kippster.net/images/icon.png">
+        {% if images.logo %}
+        <img src="static/apps/{{ slug }}/{{ images.logo }}">
+        {% endif %}
     </div>
     
     <div class="span7">
