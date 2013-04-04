@@ -43,7 +43,7 @@ p, li {
 }
 
 hr {
-    margin:60px 0;
+    margin:40px 0;
 }
 
 a {
@@ -92,7 +92,7 @@ a:hover {
     text-transform:uppercase;
     background:#32ae95;
     display:none;
-    height:260px;
+    height:280px;
 }
 
 .nav .header h1 {
@@ -130,7 +130,7 @@ body.home .nav .header {
 }
 
 
-.content h1:first-child {
+h1:first-child {
     margin-top:0;
 }
 
@@ -255,38 +255,30 @@ body.home .n-home a {
 
 .app h1 {
     margin-bottom:0;
-}
-.app table tr:last-child td {
-    text-align:center;
+    margin-top:6%;
 }
 
 .app table td, .app table th {
     padding:0 0.5em 1em;
-}
-
-.app table th {
-    text-align:right;
-}
-.app table td {
     text-align:left;
 }
 
-.icon img {
-    margin-bottom:20px;
+.app table th {
+    padding-left:20px;
+    color:#848484;
+    font-weight:normal;
+    font-size:12px;
+    text-transform:uppercase;
+    vertical-align:top;
 }
 
-hr {
-    margin:20px 0;
-}
-
-.byline {
-    color:#777;
+.app .icon img {
+    max-width:90%;
 }
  
 .app table tr:last-child .btn {
-    text-align:center;
-    width:80%;
-    margin:20px;
+    width:90%;
+    margin:20px 0 0 12px;
 }
 
 .screenshots {
@@ -308,14 +300,14 @@ hr {
 .btn {
     border:0;
     border-radius:2px;
-    padding: 0.9em 1.8em 0.8em;
+    padding: 1.4em 1.8em 1.3em;
     box-shadow:none;
     background:rgb(78, 85, 99);
     color:#fff;
     text-transform:uppercase;
     margin-right:10px;
     text-shadow:none;
-    font-size: 13px;
+    font-size: 12px;
     line-height: 1;
     font-weight: bold;
     -webkit-transition:0.1s ease-in background-color;

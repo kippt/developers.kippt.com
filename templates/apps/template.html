@@ -1,14 +1,14 @@
 <div class="row app">
  
-    <div class="span1 icon">
+    <div class="span2 icon">
         {% if images.logo %}
-        <img src="static/apps/{{ slug }}/{{ images.logo }}">
+        <img src="/static/apps/{{ slug }}/{{ images.logo }}">
         {% endif %}
     </div>
     
-    <div class="span7">
+    <div class="span6">
         <h1>{{ name }}</h1>
-        <p class="byline">by {{ developer }}</p>
+        <p class="lead">Created by {{ developer }}</p>
     </div>
 </div>
 <hr>
@@ -22,11 +22,11 @@
             <li><img src=""></li>
             <li><img src=""></li>
             <li><img src=""></li>
-            <li><img src=""></li>
         </ul>
     </div> 
 
-    <table class="span3">
+    <div class="span3">
+    <table>
         {% if developer %}
         <tr>
             <th>Developer</th>
@@ -54,7 +54,7 @@
         {% if website %}
         <tr>
             <th>Website</th>
-            <td><a href="{{ website }}" target="_blank">{{ website }}</a></td>
+            <td><a href="{{ website }}" target="_blank">Visit</a></td>
         </tr>
         {% endif %}
         {% if twitter %}
@@ -67,5 +67,6 @@
             <td colspan="2"><a href="{{ link }}" class="btn">Get the App</a></td>
         </tr>
     </table>
+    </div>
 </div>
 
