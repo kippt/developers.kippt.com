@@ -24,4 +24,10 @@ that to app gallery. To do so, submit a pull request with your app's information
 
 This will create necessary files and will instruct you to add image assets to 
 correct folders. After this you'll need to run ```fab compile:<app_slug>``` 
-command to generat the HTML for the app.
+command to generate the HTML for the app.
+
+## Lisence
+
+This site is licensed under MIT. Feel free to use it as a base for your own site
+but replace Kippt's copyrighted assets (logo) with your own. You'll want to also
+use your own Typekit and Google Analytics.
