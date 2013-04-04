@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block bodyclass %}apps-gallery{% endblock %}
+{% block body %}
+{% filter markdown %}
+
+# API Policy
+
+We hope to keep Kippt's API as open as possible. This means loose authentication without registering apps and so forth. To make this possible your app, service or library respects our policies.
+
+- Do not abuse the API or use it excessively. If you're unsure whether your planned use is excessive, <a href="mailto:hello@kippt.com">email us</a>.
+- Make sure your app/service/hack can't be mistaken as an official app. This includes app naming:
+    - Don't use the name _Kippt_ in your application, url or branding unless it's clearly separated (i.e. "Spaceclipper for Kippt" is ok but "RSS for Kippt" can be confusing).
+    - Kippt's assets (logos, code) is copyrighted, don't use them without explicit permission.
+- Never store users password (store and use API token instead).
+- Users retain the right to their content, it can't be redistributed or sold. User data must be deleted on request.
+- Kippt may terminate your license to the Kippt API under these terms at any time for any reason.
+- Kippt reserves the right to update and change these terms from time to time without notice.
+
+{% endfilter %}
+{% endblock %}
