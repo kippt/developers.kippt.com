@@ -1,6 +1,6 @@
 import os
 
-from flask import Flask
+from flask import Flask, abort
 from flask import render_template
 
 from flaskext.markdown import Markdown
