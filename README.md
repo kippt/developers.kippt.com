@@ -22,6 +22,6 @@ that to app gallery. To do so, submit a pull request with your app's information
 
     fab add
 
-This will create the manifest and description files. After this you'll need to run
-```fab compile:<app_slug>``` command given the HTML for the app.
-
+This will create necessary files and will instruct you to add image assets to 
+correct folders. After this you'll need to run ```fab compile:<app_slug>``` 
+command to generat the HTML for the app.
