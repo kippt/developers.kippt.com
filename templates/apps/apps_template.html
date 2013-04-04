@@ -1,0 +1,22 @@
+<h1>Apps Gallery</h1>
+<p class="lead">This is where you’ll find a whole library of apps to boost your Kippt experience. <a href="https://github.com/kippt/developers.kippt.com#contribute-3rd-party-apps" target="_blank">Submit your own app.</a></p>
+
+<ul class="row apps">
+    {% for app in apps %}
+    <li class="span4">
+        <a href="/apps/{{ app.slug }}">
+            <div class="icon">
+                {% if app.images.logo %}
+                <img src="/static/apps/{{ app.slug }}/{{ app.images.logo }}">
+                {% else %}
+                <img src="/static/default-logo.png">
+                {% endif %}
+            </div>
+            <p>
+                <strong>{{ app.name }}</strong>, <span>{{ app.platform }}</span><br>
+                <span>By {{ app.developer }}</span>
+            <p>
+        </a>
+    </li>
+    {% endfor %}
+</ul>
