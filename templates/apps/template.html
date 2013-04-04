@@ -1,16 +1,27 @@
 <div class="row app">
-    
-    <div class="span4">
-        <h1>{{ name }}</h1>
-        <p>by {{ developer }}</p>
-    </div>
-    
-    <div class="span3">
+ 
+    <div class="span1 icon">
         <img src="http://kippster.net/images/icon.png">
     </div>
-
+    
+    <div class="span7">
+        <h1>{{ name }}</h1>
+        <p class="byline">by {{ developer }}</p>
+    </div>
+</div>
+<hr>
+<div class="row app">    
+    
     <div class="span5">
         {{ description|safe }}
+        
+        <h2>Screenshots</h2>
+        <ul class="screenshots">
+            <li><img src=""></li>
+            <li><img src=""></li>
+            <li><img src=""></li>
+            <li><img src=""></li>
+        </ul>
     </div> 
 
     <table class="span3">

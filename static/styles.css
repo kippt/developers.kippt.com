@@ -11,6 +11,19 @@ h1, h2, h3, h4 {
     font-family:'proxima-nova', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
+h1 {
+    font-size:32px;
+    margin-bottom:0.8em;
+}
+
+h2 {
+    font-size:24px;
+}
+
+h3 {
+    font-size:20px;
+}
+
 .content h1, .content h2 {
     font-weight:300;
 }
@@ -21,6 +34,7 @@ p, li {
     line-height:1.4;
     color: #434950;
     font-family:'proxima-nova', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    margin-bottom:1.5em;
 }
 
 hr {
@@ -29,6 +43,11 @@ hr {
 
 a {
     color:#111;
+}
+
+a:hover {
+    text-decoration:none;
+    color:#777;
 }
 
 
@@ -80,6 +99,7 @@ a {
     background-size:50px;
     padding-top:80px;
     font-weight:600;
+    text-shadow: -5px 5px 0 rgba(0,0,0,0.1);
 }
 
 .nav .header p {
@@ -105,7 +125,7 @@ body.home .nav .header {
 }
 
 
-.content :first-child {
+.content h1:first-child {
     margin-top:0;
 }
 
@@ -133,8 +153,31 @@ ul.apps {
 }
 
 ul.apps li {
-    background:#eee;
-    height:160px;
+    height:240px;
+
+}
+
+.apps li .icon {
+    height:140px;
+    overflow:hidden;
+    margin-bottom:10px;
+}
+
+.apps li .icon img {
+    margin-top:-60px;
+}
+
+.apps li strong {
+}
+
+.apps li span {
+    color:#777;
+    font-size:0.8em;
+}
+
+.apps li p {
+    max-width:256px;
+    line-height:1.2;
 }
 
 /* SIDE */
@@ -172,7 +215,7 @@ ul.apps li {
     text-align:center;
     color:#ccc;
     border-top:1px solid #eee;
-    font-size:0.8em;
+    font-size:0.9em;
 }
 
 .footer a {
@@ -187,17 +230,53 @@ ul.apps li {
 
 /* APP PAGE */
 
-.app {
-    
+.app h1 {
+    margin-bottom:0;
 }
 .app table tr:last-child td {
     text-align:center;
 }
 
+.app table td, .app table th {
+    padding:0 0.5em 1em;
+}
+
+.app table th {
+    text-align:right;
+}
+.app table td {
+    text-align:left;
+}
+
+.icon img {
+    margin-bottom:20px;
+}
+
+hr {
+    margin:20px 0;
+}
+
+.byline {
+    color:#777;
+}
+ 
 .app table tr:last-child .btn {
     text-align:center;
     width:80%;
     margin:20px;
+}
+
+.screenshots {
+    margin:20px 0;
+}
+
+.screenshots li {
+    list-style-type:none;
+    width:80px;
+    height:80px;
+    background:#eee;
+    float:left;
+    margin-right:10px;
 }
 
 
