@@ -26,6 +26,11 @@ This will create necessary files and will instruct you to add image assets to
 correct folders. After this you'll need to run ```fab compile:<app_slug>``` 
 command to generate the HTML for the app.
 
+Once the app is compiled correctly, you'll need to compile the app directory
+page:
+
+    fab build_apps
+
 ## Lisence
 
 This site is licensed under MIT. Feel free to use it as a base for your own site

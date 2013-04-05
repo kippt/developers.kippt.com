@@ -17,12 +17,14 @@
     <div class="span5">
         {{ description|safe }}
         
+        {% if images.screenshots %}
         <h2>Screenshots</h2>
         <ul class="screenshots">
-            <li><img src=""></li>
-            <li><img src=""></li>
-            <li><img src=""></li>
+            {% for screenshot in images.screenshots %}
+            <li><img src="/static/apps/{{ slug }}/{{ screenshot }}"></li>
+            {% endfor %}
         </ul>
+        {% endif %}
     </div> 
 
     <div class="span3">
