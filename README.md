@@ -1,6 +1,6 @@
 # developer.kippt.com
 
-Developer site for [Kippt](https://kippt.com)'s API. 
+Developer site for [Kippt](https://kippt.com)'s API.
 
 ## Setup local environment
 
@@ -22,8 +22,8 @@ that to app gallery. To do so, submit a pull request with your app's information
 
     fab add
 
-This will create necessary files and will instruct you to add image assets to 
-correct folders. After this you'll need to run ```fab compile:<app_slug>``` 
+This will create necessary files and will instruct you to add image assets to
+correct folders. After this you'll need to run ```fab render:<app_slug>```
 command to generate the HTML for the app.
 
 Once the app is compiled correctly, you'll need to compile the app directory
