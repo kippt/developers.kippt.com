@@ -4,6 +4,8 @@
     <title>{% block title %}Welcome{% endblock %} - Kippt Developers</title>
     <link rel=stylesheet type=text/css href="{{ url_for('static', filename='bootstrap.min.css') }}">   
     <link rel=stylesheet type=text/css href="{{ url_for('static', filename='styles.css') }}">
+    <link rel=stylesheet type=text/css href="">
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='favicon.png') }}">
     {% if config.TYPEKIT_KEY %}<script type="text/javascript" src="//use.typekit.net/{{ config.TYPEKIT_KEY }}.js"></script>
     <script type="text/javascript">try{Typekit.load();}catch(e){}</script>{% endif %}
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
