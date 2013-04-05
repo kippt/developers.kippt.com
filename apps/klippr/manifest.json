@@ -1,0 +1,17 @@
+{
+    "website": "http://mborho.github.io/klippr/", 
+    "added": "April 5. 2013", 
+    "twitter": "", 
+    "link": "http://store.ovi.com/content/317057", 
+    "images": {
+        "logo": null, 
+        "screenshots": []
+    }, 
+    "slug": "klippr", 
+    "developer": "Martin Borho", 
+    "name": "Klippr", 
+    "platform_id": "7", 
+    "platform": "Other", 
+    "developer_website": "https://github.com/mborho", 
+    "price": "Free"
+}
