@@ -1,0 +1,21 @@
+{
+    "website": "", 
+    "added": "April 5. 2013", 
+    "twitter": "@jpadilla_", 
+    "link": "http://feedleap.com", 
+    "images": {
+        "logo": "logo.png", 
+        "screenshots": [
+            "add_feed.png", 
+            "connect.png", 
+            "feeds.png"
+        ]
+    }, 
+    "slug": "feedleap", 
+    "developer": "Jos\u00e9 Padilla", 
+    "name": "FeedLeap", 
+    "platform_id": "1", 
+    "platform": "Web", 
+    "developer_website": "http://jpadilla.com", 
+    "price": ""
+}

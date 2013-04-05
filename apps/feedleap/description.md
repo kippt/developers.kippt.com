@@ -1,0 +1,1 @@
+FeedLeap(RSS feeds that leap into Kippt) lets you subscribe to your favorite RSS feeds and store new entries as Clips in any Kippt List you want. Clips are stored with a url, title, and a summary.
