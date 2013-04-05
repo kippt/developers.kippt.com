@@ -38,7 +38,7 @@ def add():
     developer = prompt("Developer (your name/organization):", validate=r'^[\w|\W\s-]+$')
     developer_website = prompt("(Optional) Developer website (or Twitter address):", default='')
     print 'Platform:\n[1] Web\n[2] iOS\n[3] Android\n[4] Windows Phone\n[5] Desktop\n[6] Library\n[7] Other\n'
-    platform = prompt("Platform:", default='1', validate=r'^[1-6]+$')
+    platform = prompt("Platform:", default='1', validate=r'^[1-7]+$')
     price = prompt("(Optional) Price (e.g. $4):", default='')
     link = prompt("Link (e.g. App Store or website):", default='')
     added = date.today().strftime('%B%e. %Y')
