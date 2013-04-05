@@ -31,6 +31,9 @@ page:
 
     fab build_apps
 
+__Need help?__ If you want Kippt's staff to add your app, contact us directly
+and we'll take care of it for you.
+
 ## Lisence
 
 This site is licensed under MIT. Feel free to use it as a base for your own site
