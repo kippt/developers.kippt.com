@@ -4,7 +4,7 @@
     "twitter": "@pocket", 
     "link": "https://itunes.apple.com/app/read-it-later-pro/id309601447", 
     "images": {
-        "logo": null, 
+        "logo": "logo.png", 
         "screenshots": []
     }, 
     "slug": "pocket", 
