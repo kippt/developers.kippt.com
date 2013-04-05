@@ -30,7 +30,7 @@ h3 {
 
 
 p, li {
-    font-size:1.1em;
+    font-size:1rem;
     line-height:1.4;
     color: #434950;
     font-family:'proxima-nova', 'Helvetica Neue', Helvetica, Arial, sans-serif;
@@ -61,6 +61,8 @@ a:hover {
 .nav {
     color:#fff;
     background:rgb(30, 41, 56);
+    background:rgb(47, 185, 190);
+    background:rgb(34, 167, 179);
     padding:30px 0 0;
     min-height:52px;
 }
@@ -92,7 +94,7 @@ a:hover {
     text-transform:uppercase;
     display:none;
     height:280px;
-  
+    position:relative;
 }
 
 .nav .header h1 {
@@ -117,6 +119,13 @@ a:hover {
 /* show header when home */
 body.home .nav .header {
     display:block;
+}
+
+body.home .nav {
+    background-image:url(bg-header2.png);
+    background-position:center top;
+    background-size:cover;
+    background-repeat:no-repeat;
 }
 
 
