@@ -1,0 +1,1 @@
+When you find an interesting article, video or web page that you want to read, watch or view later, put it in Pocket. Once it’s in Pocket, it automatically syncs across to your phone, tablet and computer so you can view it anytime on any device, even without an internet connection.

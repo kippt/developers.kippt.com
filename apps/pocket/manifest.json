@@ -1,0 +1,17 @@
+{
+    "website": "http://getpocket.com/", 
+    "added": "April 5. 2013", 
+    "twitter": "@pocket", 
+    "link": "https://itunes.apple.com/app/read-it-later-pro/id309601447", 
+    "images": {
+        "logo": null, 
+        "screenshots": []
+    }, 
+    "slug": "pocket", 
+    "developer": "Pocket", 
+    "name": "Pocket", 
+    "platform_id": "2", 
+    "platform": "iOS", 
+    "developer_website": "http://getpocket.com/", 
+    "price": "Free"
+}
