@@ -1,5 +1,5 @@
 <h1>Apps Gallery</h1>
-<p class="lead">This is where you’ll find a whole library of apps to boost your Kippt experience. <a href="https://github.com/kippt/developers.kippt.com#contribute-3rd-party-apps" target="_blank">Submit your own app.</a></p>
+<p class="lead">This is where you’ll find a whole library of apps to make your Kippt experience better. <a href="https://github.com/kippt/developers.kippt.com#contribute-3rd-party-apps" target="_blank">Submit your own app.</a></p>
 
 <ul class="row apps">
     {% for app in apps %}
@@ -9,7 +9,7 @@
                 {% if app.images.logo %}
                 <img src="/static/apps/{{ app.slug }}/{{ app.images.logo }}">
                 {% else %}
-                <img src="/static/default-logo.png">
+                <img src="/static/img/default-logo.png">
                 {% endif %}
             </div>
             <p>
