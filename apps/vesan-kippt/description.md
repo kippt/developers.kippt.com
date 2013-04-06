@@ -1,0 +1,1 @@
+Ruby library for using Kippt API (https://kippt.com/developers)

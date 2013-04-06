@@ -1,0 +1,17 @@
+{
+    "website": "http://clipapp.net/", 
+    "added": "April 5. 2013", 
+    "twitter": "@clipAppMac", 
+    "link": "https://itunes.apple.com/app/clipapp-for-kippt/id573844772", 
+    "images": {
+        "logo": null, 
+        "screenshots": []
+    }, 
+    "slug": "clipapp", 
+    "developer": "MadeBy", 
+    "name": "clipApp", 
+    "platform_id": "5", 
+    "platform": "Desktop", 
+    "developer_website": "http://madeby.hm", 
+    "price": "$5.99"
+}
