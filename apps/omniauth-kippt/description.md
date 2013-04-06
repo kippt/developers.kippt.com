@@ -1,0 +1,1 @@
+A Kippt.com authentication strategy for OmniAuth

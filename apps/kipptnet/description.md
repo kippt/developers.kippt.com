@@ -1,0 +1,1 @@
+Kippt.NET is a .NET library for interacting with Kippt's API.
