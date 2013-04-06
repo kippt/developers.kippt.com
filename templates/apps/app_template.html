@@ -1,10 +1,10 @@
 <div class="row app">
  
-    <div class="span2 icon">
         {% if images.logo %}
-        <img src="/static/apps/{{ slug }}/{{ images.logo }}">
+        <div class="span2 icon">
+            <img src="/static/apps/{{ slug }}/{{ images.logo }}">
+        </div>
         {% endif %}
-    </div>
     
     <div class="span6">
         <h1>{{ name }}</h1>
@@ -72,3 +72,9 @@
     </div>
 </div>
 
+{% if images.screenshots %}
+<div id="slider-wrapper" style="display:none">  
+    <a href class="close">&times;</a>   
+    <div id="slider-inner"></div>
+</div>
+{% endif %}
