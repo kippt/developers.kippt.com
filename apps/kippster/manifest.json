@@ -1,0 +1,21 @@
+{
+    "website": "http://kippster.net/", 
+    "added": "April 6. 2013", 
+    "twitter": "kippsterapp", 
+    "link": "http://appstore.com/kippsterforkippt", 
+    "images": {
+        "logo": "logo.png", 
+        "screenshots": [
+            "article.png", 
+            "feed.png", 
+            "menu.png"
+        ]
+    }, 
+    "slug": "kippster", 
+    "developer": "Alex Robinson", 
+    "name": "Kippster", 
+    "platform_id": "2", 
+    "platform": "iOS", 
+    "developer_website": "http://alextrob.net/", 
+    "price": ""
+}
