@@ -3,19 +3,23 @@
 <head>
     <title>{% block title %}Welcome{% endblock %} - Kippt Developers</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='bootstrap.min.css') }}">   
-    <link rel=stylesheet type=text/css href="{{ url_for('static', filename='styles.css') }}">
-    <link rel=stylesheet type=text/css href="">
-    <link rel="icon" type="image/png" href="{{ url_for('static', filename='favicon.png') }}">
+    
+    <link rel=stylesheet type="text/css" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">   
+    <link rel=stylesheet type="text/css" href="{{ url_for('static', filename='css/responsiveslides.css') }}">  
+    <link rel=stylesheet type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="icon" type="image/png" href="{{ url_for('static', filename='img/favicon.png') }}">
+    
     {% if config.TYPEKIT_KEY %}<script type="text/javascript" src="//use.typekit.net/{{ config.TYPEKIT_KEY }}.js"></script>
     <script type="text/javascript">try{Typekit.load();}catch(e){}</script>{% endif %}
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/responsiveslides.min.js') }}"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='js/main.js') }}"></script>
 </head>
 
 <body class="{% block bodyclass %}{% endblock%}">
     <div class="nav">
         <div class="container">
-            <a href="/" class="logo"><img src="{{ url_for('static', filename='kippt-logo.png') }}" width="192"></a>
+            <a href="/" class="logo"><img src="{{ url_for('static', filename='img/kippt-logo.png') }}" width="192"></a>
             <a href="https://kippt.com" class="back" target="_blank">‹ Kippt</a>
         </div>  
         <div class="header">

@@ -102,7 +102,7 @@ a:hover {
     letter-spacing:0.2em;
     color:#fff;
     margin:0;
-    background:url(developer.png) center top no-repeat transparent;
+    background:url(../img/developer.png) center top no-repeat transparent;
     background-size:50px;
     padding-top:80px;
     font-weight:600;
@@ -122,7 +122,7 @@ body.home .nav .header {
 }
 
 body.home .nav {
-    background-image:url(bg-header2.png);
+    background-image:url(../img/bg-header2.png);
     background-position:center top;
     background-size:cover;
     background-repeat:no-repeat;
@@ -147,14 +147,14 @@ ul.docs {
 }
 
 a.api {
-    background:url(api.png) left top no-repeat;
+    background:url(../img/api.png) left top no-repeat;
     padding-left:60px;
     background-size:36px;
     display:block;
 }
 
 a.code {
-    background:url(code.png) left top no-repeat;
+    background:url(../img/code.png) left top no-repeat;
     padding-left:60px;
     background-size:36px;
     display:block;
@@ -177,6 +177,7 @@ ul.apps li {
 
 .apps li .icon img {
     margin-top:-60px;
+    max-width:256px;
 }
 
 .apps li strong {
@@ -288,11 +289,11 @@ body.home .n-home a {
     margin:20px 0 0 12px;
 }
 
-.screenshots {
+.app .screenshots {
     margin:20px 0;
 }
 
-.screenshots li {
+.app .screenshots li {
     list-style-type:none;
     width:80px;
     height:80px;
@@ -351,6 +352,75 @@ body.home .n-home a {
 .btn.btn-secondary:hover {
     background:#aaa;
     color:#fff;
+}
+
+.centered-btns_nav {
+  z-index: 3;
+  position: absolute;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  top: 50%;
+  left: 0;
+  opacity: 0.7;
+  text-indent: -9999px;
+  overflow: hidden;
+  text-decoration: none;
+  height: 61px;
+  width: 50px;
+  background: #000 url("../img/themes.gif") no-repeat 5px top;
+  margin-top: -45px;
+  }
+
+.centered-btns_nav:active {
+  opacity: 1.0;
+  }
+
+.centered-btns_nav.next {
+  left: auto;
+  background-position: -30px top;
+  right: 0;
+}
+
+.centered-btns_nav:focus,
+.transparent-btns_nav:focus,
+.large-btns_nav:focus {
+  outline: none;
+  }
+
+
+#slider-wrapper {
+position: fixed;
+left: 0;
+right: 0;
+bottom: 0;
+top: 0;
+background: rgba(0,0,0,0.85);
+z-index: 1000;
+}
+
+#slider-wrapper .close {
+color: #fff;
+font-size: 100px;
+font-weight: 200;
+opacity: 1;
+position: absolute;
+top: 40px;
+right: 40px;
+}
+        
+#slider-wrapper > div {
+    height: 70%;
+    width: 90%;
+    top: 15%;
+    position: absolute;
+    left: 5%;
+}
+
+#slider-wrapper .rslides img {
+    width:auto;
+    max-width:none;
+    max-height:100%;
+    float:none;
+    margin:0 auto;
 }
 
 
