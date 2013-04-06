@@ -4,7 +4,7 @@
     "twitter": "", 
     "link": "http://www.windowsphone.com/en-us/store/app/keep-it/af6a540b-a6d9-4635-8eca-a6f165633be6", 
     "images": {
-        "logo": null, 
+        "logo": "logo.png", 
         "screenshots": []
     }, 
     "slug": "keep-it", 
