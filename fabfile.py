@@ -34,7 +34,7 @@ def add():
     '''
     print _green("--- Generating new app for Kippt App Gallery")
 
-    name = prompt("App name:", default='', validate=r'^[\w\s-]+$')
+    name = prompt("App name:", default='', validate=r'^[\w|\W\s.-]+$')
     developer = prompt("Developer (your name/organization):", validate=r'^[\w|\W\s-]+$')
     developer_website = prompt("(Optional) Developer website (or Twitter address):", default='')
     print 'Platform:\n[1] Web\n[2] iOS\n[3] Android\n[4] Windows Phone\n[5] Desktop\n[6] Library\n[7] Other\n'
