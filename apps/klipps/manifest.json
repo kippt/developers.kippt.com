@@ -1,0 +1,17 @@
+{
+    "website": "http://www.raffael.me/klipps/", 
+    "added": "April 7. 2013", 
+    "twitter": "@klippsapp", 
+    "link": "http://www.raffael.me/klipps/", 
+    "images": {
+        "logo": "icon.png", 
+        "screenshots": ["screenshot_1_en.jpg","screenshot_2_en.jpg","screenshot_3_en.jpg"]
+    }, 
+    "slug": "klipps", 
+    "developer": "raffael.me", 
+    "name": "klipps", 
+    "platform_id": "5", 
+    "platform": "Desktop", 
+    "developer_website": "http://www.raffael.me/", 
+    "price": "$0"
+}
