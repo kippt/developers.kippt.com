@@ -128,7 +128,10 @@ body.home .nav {
     background-repeat:no-repeat;
 }
 
-
+/* Update nav bar to show policy as the active link when on that page. */
+body.policy .n-policy a {
+    background:#eee;
+}
 
 /* CONTENT */
 
