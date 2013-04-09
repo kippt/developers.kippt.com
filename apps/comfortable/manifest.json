@@ -4,7 +4,7 @@
     "twitter": "@ComfortableApp", 
     "link": "https://itunes.apple.com/us/app/comfortable/id588930446", 
     "images": {
-        "logo": null, 
+        "logo": "logo.png", 
         "screenshots": []
     }, 
     "slug": "comfortable", 
