@@ -179,16 +179,20 @@ def build_apps():
     Build /apps/ page
     '''
     apps = []
+    libs = []
     for app in glob.glob(os.path.join('apps/', '*')):
         data = ''
         with open("%s/manifest.json" % app, "r") as manifest:
             data = manifest.read().replace('\n', '')
         data = json.loads(data)
-        apps.append(data)
+        if data.get('platform_id') in ['6']:
+            libs.append(data)
+        else:
+            apps.append(data)
 
     output = open('templates/apps.html', 'w')
     output.write('{% extends "base.html" %}\n{% block bodyclass %}apps-gallery{% endblock %}\n{% block body %}')
     env = Environment(loader=FileSystemLoader('templates'))
     template = env.get_template('apps/apps_template.html')
-    output.write(template.render({'apps': apps}))
+    output.write(template.render({'apps': apps, 'libs': libs}))
     output.write('\n{% endblock %}')
