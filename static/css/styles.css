@@ -55,7 +55,6 @@ a:hover {
     color:#777;
 }
 
-
 /* NAV */
 
 .nav {
@@ -77,16 +76,6 @@ a:hover {
     letter-spacing:1px;
     line-height:1.5;
 }
-
-/*
-.nav .header {
-    padding:120px 0;
-    text-align:center;
-    text-transform:uppercase;
-    background:url(bg-header.jpg) center bottom no-repeat;
-    display:none;
-}
-*/
 
 .nav .header {
     padding:80px 0 0;
@@ -127,6 +116,14 @@ body.home .nav {
     background-size:cover;
     background-repeat:no-repeat;
 }
+
+.more {
+    padding:8px 16px;
+    background:#eee;
+    text-transform:uppercase;
+    font-size:12px;
+}
+
 
 /* Update nav bar to show policy as the active link when on that page. */
 body.policy .n-policy a {
@@ -236,7 +233,8 @@ ul.apps li {
 }
 
 body.apps-gallery .n-apps a,
-body.home .n-home a {
+body.home .n-home a,
+body.policy .n-policy a {
     background:#eee;    
 }
 
@@ -358,58 +356,58 @@ body.home .n-home a {
 }
 
 .centered-btns_nav {
-  z-index: 3;
-  position: absolute;
-  -webkit-tap-highlight-color: rgba(0,0,0,0);
-  top: 50%;
-  left: 0;
-  opacity: 0.7;
-  text-indent: -9999px;
-  overflow: hidden;
-  text-decoration: none;
-  height: 61px;
-  width: 50px;
-  background: #000 url("../img/themes.gif") no-repeat 5px top;
-  margin-top: -45px;
-  }
+    z-index: 3;
+    position: absolute;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    top: 50%;
+    left: 0;
+    opacity: 0.7;
+    text-indent: -9999px;
+    overflow: hidden;
+    text-decoration: none;
+    height: 61px;
+    width: 50px;
+    background: #000 url("../img/themes.gif") no-repeat 5px top;
+    margin-top: -45px;
+}
 
 .centered-btns_nav:active {
-  opacity: 1.0;
-  }
+    opacity: 1.0;
+}
 
 .centered-btns_nav.next {
-  left: auto;
-  background-position: -30px top;
-  right: 0;
+    left: auto;
+    background-position: -30px top;
+    right: 0;
 }
 
 .centered-btns_nav:focus,
 .transparent-btns_nav:focus,
 .large-btns_nav:focus {
-  outline: none;
-  }
+    outline: none;
+}
 
 
 #slider-wrapper {
-position: fixed;
-left: 0;
-right: 0;
-bottom: 0;
-top: 0;
-background: rgba(0,0,0,0.85);
-z-index: 1000;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background: rgba(0,0,0,0.85);
+    z-index: 1000;
 }
 
 #slider-wrapper .close {
-color: #fff;
-font-size: 100px;
-font-weight: 200;
-opacity: 1;
-position: absolute;
-top: 40px;
-right: 40px;
+    color: #fff;
+    font-size: 100px;
+    font-weight: 200;
+    opacity: 1;
+    position: absolute;
+    top: 40px;
+    right: 40px;
 }
-        
+
 #slider-wrapper > div {
     height: 70%;
     width: 90%;
