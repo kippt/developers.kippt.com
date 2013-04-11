@@ -4,10 +4,12 @@
     <title>{% block title %}Welcome{% endblock %} - Kippt Developers</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    {% block opengraph %}
     <meta property="og:title" content="Kippt for Developers" />
     <meta name="description" content="Reference documentation and resources for the Kippt API">
     <meta property="og:description" content="Reference documentation and resources for the Kippt API" />
     <meta property="og:image" content="{{ url_for('static', filename='img/developers.png') }}" />
+    {% endblock %}
     
     <link rel=stylesheet type="text/css" href="{{ url_for('static', filename='css/bootstrap.min.css') }}">   
     <link rel=stylesheet type="text/css" href="{{ url_for('static', filename='css/responsiveslides.css') }}">  

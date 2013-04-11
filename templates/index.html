@@ -25,7 +25,7 @@
 
 <h2>API Mailing list</h2>
 
-<p>If you use Kippt's API, we invite you to join our mailing list. It's used for communicating changes and answering questions related to the API. To contact us directly, email us at hello@kippt.com.</p>
+<p>If you use Kippt's API, we invite you to join our <a href="https://groups.google.com/forum/?fromgroups#!forum/kippt-developers">mailing list</a>. It's used for communicating changes and answering questions related to the API. To contact us directly, email us at hello@kippt.com.</p>
 
 <hr>
 
@@ -33,7 +33,9 @@
 
 <p>Some apps also support API token authentication and it's useful for scripts when you don't want to save your password in plain text. You can always request your API key from the API or you can copy it from here:</p>
 
-<p><iframe src="https://kippt.com/accounts/api_token/" /></p>
+<p>
+    <strong>Your API token:</strong> <iframe src="https://kippt.com/accounts/api_token/" class="token"></iframe>
+</p>
 
 <hr>
 
@@ -73,7 +75,7 @@
         });
         function parallaxScroll(){
             var scrolledY = $(window).scrollTop();
-            $('.header').css({
+            $('.home .header').css({
                 'top' : (scrolledY*0.53)+"px",
                 'opacity' : 1-(scrolledY/266)
             });
