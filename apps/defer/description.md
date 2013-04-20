@@ -1,0 +1,1 @@
+Defer is a Google Chrome extension to save your links to any of the most popular services for reading later: Instapaper, Readability, Pocket, and Kippt.
