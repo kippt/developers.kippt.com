@@ -108,6 +108,7 @@ a:hover {
 /* show header when home */
 body.home .nav .header {
     display:block;
+    z-index:1;
 }
 
 body.home .nav {
@@ -131,6 +132,11 @@ body.policy .n-policy a {
 }
 
 /* CONTENT */
+
+.main, .side {
+    z-index:10;
+    position:relative;
+}
 
 .side, .content {
     padding:60px 0;
