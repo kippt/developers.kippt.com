@@ -1,0 +1,17 @@
+{
+    "website": "http://www.getdefer.com", 
+    "added": "April 20. 2013", 
+    "twitter": "", 
+    "link": "http://www.getdefer.com", 
+    "images": {
+        "logo": "logo.png", 
+        "screenshots": ["big-popup.png", "classic-popup.png", "options.png"]
+    }, 
+    "slug": "defer", 
+    "developer": "Edgar J. Suarez", 
+    "name": "Defer", 
+    "platform_id": "1", 
+    "platform": "Web", 
+    "developer_website": "http://edgarjs.com", 
+    "price": "Free"
+}
