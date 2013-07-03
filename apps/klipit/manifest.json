@@ -1,0 +1,21 @@
+{
+    "website": "", 
+    "added": "July 3. 2013", 
+    "twitter": "", 
+    "link": "https://play.google.com/store/apps/details?id=com.fourmob.klipit", 
+    "images": {
+        "logo": "logo.png", 
+        "screenshots": [
+            "list.png", 
+            "lists.png", 
+            "read.png"
+        ]
+    }, 
+    "slug": "klipit", 
+    "developer": "Fourmob", 
+    "name": "KlipIt", 
+    "platform_id": "3", 
+    "platform": "Android", 
+    "developer_website": "http://www.fourmob.fr/", 
+    "price": "Free"
+}
