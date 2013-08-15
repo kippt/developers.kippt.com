@@ -1,0 +1,17 @@
+{
+    "website": "http://www.curioustimes.de/mrreader/", 
+    "added": "August 15, 2013", 
+    "twitter": "@mrreaderapp", 
+    "link": "http://www.itunes.com/apps/mrreader", 
+    "images": {
+        "logo": "logo.png", 
+        "screenshots": []
+    }, 
+    "slug": "mr-reader", 
+    "developer": "Oliver F\u00fcrni\u00df", 
+    "name": "Mr. Reader", 
+    "platform_id": "2", 
+    "platform": "iOS", 
+    "developer_website": "@curioustimes", 
+    "price": ""
+}
